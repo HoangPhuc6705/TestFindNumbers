@@ -1,3 +1,1 @@
-<script>
-  window.location.assign('Main/home.html')
-</script>
+Test version 8.1.0
