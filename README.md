@@ -1,2 +1,1 @@
-# TestFindNumbers
-Test Version 8.1.0
+<script>window.location.assign('index.html');</script>
