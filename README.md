@@ -1,3 +1,3 @@
 <script>
-  window.location.assign('../Main/home.html')
+  window.location.assign('Main/home.html')
 </script>
