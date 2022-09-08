@@ -7,6 +7,7 @@ var Table = (side) => {
   }
   // Xáo mảng
   A = A.sort(() => Math.random() - 0.5);
+  A = A.sort(() => Math.random() - 0.5);
 
   for (let i = 0; i < side; i++) {
     Matrix[i] = [];
