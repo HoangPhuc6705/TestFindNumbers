@@ -16,7 +16,7 @@ const TimeList = [
 
 // Kích thước
 const SizeList = [
-  3, 4, 5, 6, 7, 8, 10
+  3, 4, 5, 6, 7, 8, 9, 10
 ]
 
 // Get Mode, Time and Size Value
@@ -77,6 +77,11 @@ var TimeFunction = () => {
       }, 500)
       ModeName[1].innerHTML = `${TimeList[i]} phút`;
       GetTimeGame = TimeList[i];
+
+      if (GetTimeGame == 1) {
+        ModeName[2].innerHTML = `${SizeList[2]} x ${SizeList[2]}`;
+        GetSizeGame = SizeList[2];
+      }
     }
     document.querySelector('.select-box').appendChild(timer);
   }
@@ -84,6 +89,11 @@ var TimeFunction = () => {
 var SizeFunction = () => {
   CreateBox('Chọn kích thước');
   for (let i = 0; i < SizeList.length; i++) {
+
+    if ((GetTimeGame == TimeList[0]) && (i > 4)) {
+      continue;
+    }
+
     const size = document.createElement('div');
     size.innerHTML = `${SizeList[i]} x ${SizeList[i]}`;
     size.onclick = () => {

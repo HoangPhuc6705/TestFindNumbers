@@ -17,13 +17,12 @@ var TheMatrix = () => {
     theTable.appendChild(rows);
     for (let j in matrix.Matrix) {
       const columns = document.createElement('td');
-      columns.onclick = () => {
-        alert();
-      }
+      const div = document.createElement('div');
       const numbers = document.createElement('p');
+      columns.appendChild(div);
       numbers.className = 'numbers';
       numbers.innerHTML = matrix.Matrix[i][j];
-      columns.appendChild(numbers);
+      div.appendChild(numbers);
       rows.appendChild(columns);
     }
   }

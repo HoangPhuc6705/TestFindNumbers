@@ -88,7 +88,6 @@ form {
   gap: 5px;
 }
 .choose form div .select {
-  border: 1px solid white;
   width: 200px;
   height: 30px;
   outline: none;
@@ -121,7 +120,6 @@ form {
 .list ion-icon {
   color: rgb(60, 60, 60);
   transform: scale(1.3);
-  margin-left: 2px;
 }
 .list:hover {
   width: calc(30px + 30px);
@@ -138,4 +136,58 @@ form {
 }
 .info:hover {
   color: rgb(70, 70, 70);
+}
+
+@keyframes Close {
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+@keyframes opacity {
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.DigitalClock {
+  position: absolute;
+  top: 0;
+  width: 15vw;
+  height: 5vw;
+  background: rgb(70, 70, 70);
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+}
+.DigitalClock div {
+  width: 90%;
+  height: 80%;
+  background: rgb(50, 50, 50);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DigitalClock div p {
+  letter-spacing: 4px;
+}
+@keyframes timebox {
+  0% {
+    transform: translateY(-5vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .DigitalClock {
+    width: 25vw;
+    height: 10vw;
+    font-size: 5vw;
+  }
 }
