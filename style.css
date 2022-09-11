@@ -174,7 +174,7 @@ form {
   align-items: center;
 }
 .DigitalClock div p {
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 @keyframes timebox {
   0% {
@@ -189,5 +189,32 @@ form {
     width: 25vw;
     height: 10vw;
     font-size: 5vw;
+  }
+}
+@keyframes flicker {
+  20% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+
+
+.guide {
+  position: absolute;
+  bottom: 10%;
+}
+@keyframes guideOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes guideOff {
+  100% {
+    opacity: 0;
   }
 }

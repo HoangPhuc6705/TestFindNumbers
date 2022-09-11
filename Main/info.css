@@ -47,3 +47,24 @@
     transform: translateY(20px);
   }
 }
+
+.setting-info {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 15px;
+}
+.setting-info ion-icon {
+  cursor: pointer;
+  transform: scale(1.5);
+  background: rgb(60, 60, 60);
+  padding: 3px;
+  border-radius: 2px;
+  transition: .2s;
+}
+.setting-info ion-icon:hover {
+  color: rgb(60, 60, 60);
+  background: white;
+}

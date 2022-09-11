@@ -1,3 +1,4 @@
+import { GetTimeGame } from '../List/list.js';
 import { a } from '../Main/main.js'
 import { PseudoMatrix } from '../matrix/gameplay/game.js';
 
@@ -5,14 +6,19 @@ var Minutes,
   Second;
 
 var thetime = (x) => {
-    // Minutes = 0;
-    Second = 60 * x;
-    // Second = 5;
+  // Minutes = 0;
+  // Second = 20;
+
+  Second = 60 * x;
 }
 
 var Timeremaining = () => {
   Minutes = Math.floor(Second / 60);
   let Sc = Second % 60;
+  halftime();
+  if (Second <= 30) {
+    flicker();
+  }
   if (Second < 1) {
     document.querySelector('.DigitalClock div p').innerHTML = `${check(Minutes)}:${check(Sc)}`;
     Loss();
@@ -38,13 +44,52 @@ var DigitalClock = () => {
   document.body.appendChild(clockOutside);
 }
 
+var halftime = () => {
+  if (Second == Math.floor((GetTimeGame * 60) / 2)) {
+    note(`Một nửa thời gian đã trôi qua...`);
+  }
+
+  if (Second == 10) {
+    note(`Còn ${Second} giây cuối cùng !`);
+  }
+
+  if (Second == 0) {
+    note(`HẾT GIỜ !`)
+  }
+}
+
+var flicker = () => {
+  document.querySelector('.DigitalClock div p').style.animation = 'flicker 0.75s';
+  setTimeout(() => {
+    document.querySelector('.DigitalClock div p').style.animation = 'none';
+  }, 750);
+}
+
+var note = (noti) => {
+  const text = document.querySelector('.guide');
+  text.style.animation = 'none';
+
+  text.innerHTML = noti;
+
+  text.style.animation = 'guideOn 0.5s';
+  setTimeout(() => {
+    text.style.visibility = 'unset';
+  }, 500)
+  text.style.visibility = 'unset';
+  setTimeout(() => {
+    text.style.animation = 'guideOff 0.5s';
+    setTimeout(() => {
+      text.style.visibility = 'hidden';
+    }, 500)
+  }, 5000);
+}
+
 var Loss = () => {
   for (let i in PseudoMatrix) {
     for (let j in PseudoMatrix) {
       PseudoMatrix[i][j] = 2;
     }
   }
-  console.log(PseudoMatrix);
 }
 
 export {
