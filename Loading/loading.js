@@ -22,20 +22,25 @@ var MottoText = [
   `Yêu cùng lớp là mối tình tuyệt vời nhất...`,
   `Đối với tớ, cậu là bạn thân !`,
   `Miệng thì nói vậy thôi</br>Chứ nhìn em vui vẻ bên người khác nghĩ sao không buồn`,
-  `Chỉ là bạn...`,
+  `Si tình cùng một lúc nhiều người gọi là gì ?</br>Sida`,
   `Đôi khi người chúng ta thích, không thích ta`,
   `Boi hai mái, đi đái cũng nhớ em`,
-  `Ngọt ngào đến mấy cũng tan thành mây`
+  `Ngọt ngào đến mấy cũng tan thành mây`,
+  `Càng yêu nhau lâu, người ta càng hiểu nhau sâu</br>
+  Càng hiểu nhau sâu, càng dễ làm nhau đau...`
 ]
 
 var Intro = () => {
   motto.innerHTML = MottoText[Math.floor(Math.random() * MottoText.length)];
   setTimeout(() => {
     TheLoadingbox.style.animation = 'opacity 0.5s';
+    document.querySelector('.choose').style.display = 'flex';
+    document.querySelector('.title').style.display = 'block';
+    document.querySelector('.clock').style.display = 'flex';
     setTimeout(() => {
       TheLoadingbox.remove();
     }, 500);
-  }, 3000)
+  }, 3000);
 }
 
-export {Intro};
+export { Intro };

@@ -7,12 +7,16 @@ import * as time from '../time/times.js';
 import setting_info from './infogame/infogame.js';
 import * as load from '../Loading/loading.js';
 
+document.querySelector('.choose').style.display = 'none';
+document.querySelector('.title').style.display = 'none';
+document.querySelector('.clock').style.display = 'none';
+
 load.Intro();
 
 var a;
 var TurnOn = false;
 document.querySelector('.start').onclick = () => {
-    StartGame();
+  StartGame();
 }
 
 var StartGame = () => {

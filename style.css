@@ -42,9 +42,9 @@ body {
   align-items: center;
   position: relative;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .choose {
-    width: 300px;
+    width: 350px;
   }
 }
 .mode-name {
@@ -200,7 +200,10 @@ form {
   }
 }
 @keyframes flicker {
-  20% {
+  0% {
+    color: red;
+  }
+  30% {
     color: red;
   }
   100% {

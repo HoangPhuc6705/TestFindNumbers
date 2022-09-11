@@ -42,6 +42,9 @@ td div {
   .numbers {
     font-size: 3.5vw;
   }
+  .title {
+    font-size: 6vw;
+  }
 }
 
 @keyframes animateTable {
