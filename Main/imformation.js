@@ -16,7 +16,7 @@ document.querySelector('.info').onclick = () => {
   textinfo.className = 'text-info';
   document.body.appendChild(textinfo);
   textinfo.innerHTML = 'Copyright by FMACK - Hoang Phuc</br>Bạn đang chơi bản thử nghiệm Find Numbers 8.1.0'
-  textinfo.style.animation = 'animate 0.5s'
+  textinfo.style.animation = 'animateChoose 0.5s'
 
   // <ion-icon name="close-circle-outline"></ion-icon>
   const exit = document.createElement('ion-icon');

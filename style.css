@@ -149,6 +149,14 @@ form {
     opacity: 0;
   }
 }
+@keyframes LoadingAniamte {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 
 

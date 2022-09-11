@@ -121,7 +121,7 @@ var CreateBox = (change) => {
   const boxList = document.createElement('div');
   boxList.className = 'box-boxlist';
   document.body.appendChild(boxList);
-  boxList.style.animation = 'animate 0.5s';
+  boxList.style.animation = 'animateChoose 0.5s';
 
   // Tiêu đề
   const changeInput = document.createElement('h2');

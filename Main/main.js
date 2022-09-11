@@ -5,11 +5,14 @@ import * as createTable from '../matrix/createTable.js';
 import * as MintoMax from '../Mode/Mintomax.js';
 import * as time from '../time/times.js';
 import setting_info from './infogame/infogame.js';
+import * as load from '../Loading/loading.js';
+
+load.Intro();
 
 var a;
 var TurnOn = false;
 document.querySelector('.start').onclick = () => {
-  StartGame();
+    StartGame();
 }
 
 var StartGame = () => {
@@ -50,9 +53,11 @@ var StartGame = () => {
       document.querySelector('.DigitalClock').style.animation = 'timebox 0.5s';
       a = setInterval(time.Timeremaining, 1000);
     }, list.GetSizeGame * 50 + 1000);
-
-
   }, 1000);
+
+}
+
+var LoadingGameplay = () => {
 
 }
 
