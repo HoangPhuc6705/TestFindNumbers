@@ -42,6 +42,9 @@ td div {
   .title {
     font-size: 6vw;
   }
+  .numbers {
+    font-size: 4vw;
+  }
   .loading2 p {
     font-size: 3vw;
   }
