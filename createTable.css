@@ -1,0 +1,71 @@
+.The-table {
+  background: rgb(70, 70, 70);
+  padding: 15px;
+  border-radius: 10px;
+  animation: animateTable 1s;
+}
+table {
+  background: rgb(50, 50, 50);
+  padding: 10px;
+  border-spacing: 5px;
+  border-radius: 5px;
+  width: 600px;
+  height: 600px;
+}
+td {
+  /* visibility: hidden; */
+  cursor: pointer;
+  text-align: center;
+  background: rgb(70, 70, 70);
+  border-radius: 0.1rem;
+  transition: 0.2s;
+}
+td div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* font-size: 6vw; */
+}
+.numbers {
+  position: absolute;
+}
+@media only screen and (max-width: 700px) {
+  table {
+    width: 85vw;
+    height: 85vw;
+    padding: 1vw;
+    border-spacing: 1vw;
+  }
+  .title {
+    font-size: 6vw;
+  }
+  .numbers {
+    font-size: 4vw;
+  }
+  .loading2 p {
+    font-size: 3vw;
+  }
+}
+
+@keyframes animateTable {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes box {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
