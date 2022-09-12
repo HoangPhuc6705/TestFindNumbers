@@ -20,27 +20,33 @@ TheLoadingbox2.appendChild(motto);
 
 var MottoText = [
   `Yêu cùng lớp là mối tình tuyệt vời nhất...`,
-  `Đối với tớ, cậu là bạn thân !`,
+  `Đối với tao, mày là bạn thân !`,
   `Miệng thì nói vậy thôi</br>Chứ nhìn em vui vẻ bên người khác nghĩ sao không buồn`,
-  `Si tình cùng một lúc nhiều người gọi là gì ?</br>Sida`,
+  `Si tình cùng một lúc nhiều người gọi là gì ?</br>Siđa`,
   `Đôi khi người chúng ta thích, không thích ta`,
   `Boi hai mái, đi đái cũng nhớ em`,
   `Ngọt ngào đến mấy cũng tan thành mây`,
   `Càng yêu nhau lâu, người ta càng hiểu nhau sâu</br>
-  Càng hiểu nhau sâu, càng dễ làm nhau đau...`
+  Càng hiểu nhau sâu, càng dễ làm nhau đau...`,
+  `Tôi yêu em như hoa yêu lá</br>
+  Nhưng tiết là như bỉ ngạn hoa</br>
+  Ngàn năm lá đợi hoa không nở</br>
+  Ngàn năm hoa nở lá không về...`,
+  `Sau cùng thì em vẫn thuộc về người đó...`,
+  `Khi họ gặp được người tốt hơn</br>Họ sẽ lãng quên bạn !`,
+  `Tình tan, duyên tàn`,
+  `Tình đẹp đến mấy cũng đến lúc tàn thôi`
 ]
 
 var Intro = () => {
   motto.innerHTML = MottoText[Math.floor(Math.random() * MottoText.length)];
+  // motto.innerHTML = MottoText[MottoText.length-1];
   setTimeout(() => {
     TheLoadingbox.style.animation = 'opacity 0.5s';
-    document.querySelector('.choose').style.display = 'flex';
-    document.querySelector('.title').style.display = 'block';
-    document.querySelector('.clock').style.display = 'flex';
     setTimeout(() => {
       TheLoadingbox.remove();
     }, 500);
-  }, 3000);
+  }, 4000);
 }
 
 export { Intro };

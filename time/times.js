@@ -1,6 +1,7 @@
 import { GetTimeGame } from '../List/list.js';
-import { a } from '../Main/main.js'
+import { a } from '../main.js'
 import { PseudoMatrix } from '../matrix/gameplay/game.js';
+import { Loser } from '../Main/WinLoss/winloss.js';
 
 var Minutes,
   Second;
@@ -22,6 +23,9 @@ var Timeremaining = () => {
   if (Second < 1) {
     document.querySelector('.DigitalClock div p').innerHTML = `${check(Minutes)}:${check(Sc)}`;
     Loss();
+    setTimeout(() => {
+      Loser();
+    }, 2000)
     clearInterval(a);
     return false;
   }
@@ -46,15 +50,15 @@ var DigitalClock = () => {
 
 var halftime = () => {
   if (Second == Math.floor((GetTimeGame * 60) / 2)) {
-    note(`Một nửa thời gian đã trôi qua...`);
+    note(`Một nửa thời gian đã trôi qua...`, 5000);
   }
 
   if (Second == 10) {
-    note(`Còn ${Second} giây cuối cùng !`);
+    note(`Còn ${Second} giây cuối cùng !`, 5000);
   }
 
   if (Second == 0) {
-    note(`HẾT GIỜ !`)
+    note(`HẾT GIỜ !`, 5000)
   }
 }
 
@@ -65,7 +69,7 @@ var flicker = () => {
   }, 750);
 }
 
-var note = (noti) => {
+var note = (noti, duration) => {
   const text = document.querySelector('.guide');
   text.style.animation = 'none';
 
@@ -81,7 +85,7 @@ var note = (noti) => {
     setTimeout(() => {
       text.style.visibility = 'hidden';
     }, 500)
-  }, 5000);
+  }, duration);
 }
 
 var Loss = () => {
@@ -99,4 +103,5 @@ export {
   check,
   thetime,
   DigitalClock,
+  note
 }

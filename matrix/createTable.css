@@ -39,11 +39,11 @@ td div {
     padding: 1vw;
     border-spacing: 1vw;
   }
-  .numbers {
-    font-size: 3.5vw;
-  }
   .title {
     font-size: 6vw;
+  }
+  .loading2 p {
+    font-size: 3vw;
   }
 }
 
