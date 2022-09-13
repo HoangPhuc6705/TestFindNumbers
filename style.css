@@ -255,3 +255,7 @@ form {
     transform: rotateX(0);
   }
 }
+
+.title, .choose {
+  display: none;
+}

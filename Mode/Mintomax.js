@@ -42,13 +42,16 @@ var ChooseBox = (x, y) => {
 
   // Back end
   if (A[x][y] == main.list.GetSizeGame * main.list.GetSizeGame) {
-    clearInterval(a);
-    const noti = document.querySelector('.guide');
-    noti.style.visibility = 'visible';
-    noti.innerHTML = `Xuất sắc quá anh iuuu <3`;
+    note(`Xuất sắc quá anh iuuu <3`, 3000);
+    setTimeout(() => {
+      document.querySelector('.guide').style.visibility = `visible`;
+      document.querySelector('.guide').innerHTML = `Click vào khoảng trống để tiếp tục`;
+      document.body.onclick = () => { Result.Continue() }
+    }, 4000)
     setTimeout(() => {
       Result.Winer();
-    }, 2000)
+    }, 2000);
+    clearInterval(a);
     return true;
   }
   for (let i in A) {
@@ -64,7 +67,7 @@ var Encourage = () => {
   if (encourage == Math.floor((main.list.GetSizeGame * main.list.GetSizeGame) / 2)) {
     note(`Quá tuyệt vời! Cố lên !!`, 2000);
   }
-  if (encourage == (GetSizeGame * GetSizeGame - Math.floor(GetSizeGame * GetSizeGame / 4))) {
+  if (encourage == (GetSizeGame * GetSizeGame - Math.floor(GetSizeGame * GetSizeGame / 6))) {
     note(`Còn một xíu nữa thôi, tiến lên !!`, 2000);
   }
 }

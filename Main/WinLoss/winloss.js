@@ -1,3 +1,4 @@
+import { Intro } from "../../Loading/loading.js";
 var Winer = () => {
   const box = document.createElement('div');
   box.className = 'WinGameBox';
@@ -22,7 +23,12 @@ var Loser = () => {
   // .WinLostText
 }
 
+var Continue = () => {
+  window.location.reload();
+}
+
 export {
   Winer,
-  Loser
+  Loser,
+  Continue
 }

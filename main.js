@@ -7,9 +7,8 @@ import * as time from './time/times.js';
 import setting_info from './Main/infogame/infogame.js';
 import * as load from './Loading/loading.js';
 
-document.body.onload = () => {
-  load.Intro();
-};
+
+load.Intro();
 
 var a;
 var TurnOn = false;
@@ -22,9 +21,9 @@ var StartGame = () => {
   document.querySelector('.title').style.animation = 'opacity .5s';
   document.querySelector('.clock').style.animation = 'opacity .5s';
   setTimeout(() => {
-    document.querySelector('h1').remove();
-    document.querySelector('.choose').remove();
-    document.querySelector('.background').remove();
+    document.querySelector('h1').style.display = 'none';
+    document.querySelector('.choose').style.display = 'none';
+    document.querySelector('.background').style.display = 'none';
   }, 500)
 
   setTimeout(() => {
@@ -38,11 +37,9 @@ var StartGame = () => {
     if (window.matchMedia("(max-width: 700px)").matches) {
       // Chỉnh cỡ chữ theo điện thoại
       document.querySelector('table').style.fontSize = list.GetSizeGame == 10 ? `${11 - list.GetSizeGame + 0.8}vw` : `${11 - list.GetSizeGame - 2}vw`;
-      console.log(list.GetSizeGame == 10 ? `${11 - list.GetSizeGame + 0.8}vw` : `${11 - list.GetSizeGame - 2}vw`);
     } else {
       // Chỉnh cỡ chữ theo máy tính
       document.querySelector('table').style.fontSize = list.GetSizeGame == 10 ? `${11 - list.GetSizeGame + 0.8}vw` : `${11 - list.GetSizeGame - 2}vw`;
-      console.log(list.GetSizeGame == 10 ? `${11 - list.GetSizeGame + 0.8}vw` : `${11 - list.GetSizeGame - 2}vw`);
     }
 
     setting_info();
