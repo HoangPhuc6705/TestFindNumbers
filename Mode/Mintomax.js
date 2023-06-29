@@ -29,7 +29,7 @@ var ChooseBox = (x, y) => {
   // Wrong
   if ((main.CreateMatrix.PseudoMatrix[x][y] == 0) || (main.CreateMatrix.PseudoMatrix[x][y] == 2)) {
     if (PseudoMatrix[x][y] == 0) {
-      note(`Ơ kìa sai rồi bạn`, 2000);
+      note(`Sai !`, 2000);
     }
     return false;
   }
@@ -42,7 +42,7 @@ var ChooseBox = (x, y) => {
 
   // Back end
   if (A[x][y] == main.list.GetSizeGame * main.list.GetSizeGame) {
-    note(`Xuất sắc quá anh iuuu <3`, 3000);
+    // note(`Xuất sắc quá anh iuuu <3`, 3000);
     setTimeout(() => {
       document.querySelector('.guide').style.visibility = `visible`;
       document.querySelector('.guide').innerHTML = `Click vào khoảng trống để tiếp tục`;
@@ -63,14 +63,14 @@ var ChooseBox = (x, y) => {
   }
 }
 
-var Encourage = () => {
-  if (encourage == Math.floor((main.list.GetSizeGame * main.list.GetSizeGame) / 2)) {
-    note(`Quá tuyệt vời! Cố lên !!`, 2000);
-  }
-  if (encourage == (GetSizeGame * GetSizeGame - Math.floor(GetSizeGame * GetSizeGame / 6))) {
-    note(`Còn một xíu nữa thôi, tiến lên !!`, 2000);
-  }
-}
+// var Encourage = () => {
+//   if (encourage == Math.floor((main.list.GetSizeGame * main.list.GetSizeGame) / 2)) {
+//     note(`Quá tuyệt vời! Cố lên !!`, 2000);
+//   }
+//   if (encourage == (GetSizeGame * GetSizeGame - Math.floor(GetSizeGame * GetSizeGame / 6))) {
+//     note(`Còn một xíu nữa thôi, tiến lên !!`, 2000);
+//   }
+// }
 
 export {
   MintoMax,
